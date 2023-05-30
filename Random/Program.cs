@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Xml.Serialization;
 
 class RandomSeed
@@ -16,17 +16,17 @@ class RandomSeed
         }
 
 
-        Period(numbers);
-        Frequancy(numbers);
-        CustomFrequancy(numbers);
+        Period(numbers);//Вычисление периода повторения рандома
+        Frequancy(numbers);//Вычисление вероятностей чисел от 1 до 10
+        CustomFrequancy(numbers);// Подгонка и вычисление выероятностей числел от 1 до 5
        
     }
 
     private static void Frequancy(int[] array)
     {
-        int[] count = Count(array);
+        int[] count = Count(array);//Подсчёт всех значений
         Console.WriteLine("Freaquancy");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++)//Вывод
         {
             Console.WriteLine("Кол-во элементов со значением "+(i+1)+" : "+count[i]+ " Вероятность появления : " + (double) count[i] / array.Length);
         }
